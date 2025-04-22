@@ -43,3 +43,6 @@ app.*.map.json
 /android/app/release
 0data.txt
 /android/key.properties
+.env
+/android/gradle.properties
+/ios/Flutter/env.xcconfig

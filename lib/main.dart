@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 import 'package:real_estate_app/controllers/home.controller.dart';
 import 'package:real_estate_app/routes/route.dart';
@@ -8,7 +9,8 @@ import 'package:real_estate_app/utils/theme.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
 
-void main() {
+void main() async{
+  await dotenv.load();
   Get.put(HomeController(), permanent: true);
   runApp(const MyApp());
 }
